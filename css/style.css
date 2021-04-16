@@ -1,0 +1,162 @@
+.bold {
+  font-weight: bold;
+}
+
+.text p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .9vw;
+  margin: 5px 0;
+}
+
+.text h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1vw;
+}
+
+.text a {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* header */
+.nav {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  padding: 0 55px;
+}
+
+.nav .left {
+  margin-top: 35px;
+  height: fit-content;
+  height: -moz-max-content;
+  cursor: pointer;
+}
+
+.nav .right {
+  border: 1px solid black;
+  border-radius: 18px;
+  margin-top: 33px;
+  height: fit-content;
+  height: -moz-max-content;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.logo {
+  transform: scale(0.6);
+}
+
+
+/* body */
+.main {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  padding: 60px 225px;
+}
+
+.column { width: 48%; }
+
+.column .experiences .text ul li {
+  font-size: .9vw;
+}
+
+.circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  display: flex;
+  height: 30vw;
+  width: 30vw;
+  background-color: rgb(230 230 230);
+  border-radius: 50%;
+}
+
+.circle::before {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+
+.circle-content {
+  padding: 8% 15%;
+}
+
+.circle-content .top {
+  display: flex;
+  margin-top: -20px;
+}
+
+.circle-content .top img {
+  height: 8vw;
+}
+
+.circle-content .top h2 {
+  white-space: nowrap;
+  margin: 7vw 4vw 0 0;
+}
+
+.circle-content .middle {
+  font-size: 1vw;
+}
+
+.circle-content .bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.circle-content .bottom p {
+  margin: 5px 0;
+}
+
+.circle-content .bottom img {
+  margin-left: 10px;
+  width: 28px;
+  height: 25px;
+}
+
+
+/* footer */
+.footer {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(235, 201, 201);
+  height: 100px;
+  margin-top: 40px;
+}
+
+.footer .left {
+  width: 33%;
+}
+
+.footer .middle {
+  width: 33%;
+  text-align: center;
+}
+
+.footer .left img {
+  transform: scale(0.5);
+}
+
+.footer .middle p {
+  margin: 5px 0;
+}
+
+.footer .right {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+}
+
+.footer .right img {
+  width: 28px;
+  height: 25px;
+  margin: -5px 0 0 10px;
+}
