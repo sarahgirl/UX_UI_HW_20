@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Design Detail</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/516ef7d9d8.js" crossorigin="anonymous"></script>
+        
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <a href="./studies.html"><button>WORK</button></a>
+            <a href="./index.html"><img class="logo" src="images/nbg_logo.png"/></a>
+            <a href="resume.html"><button>Resume</button></a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="nav-button-container">
+            <button type="button" >UX/UI DESIGN</button>
+            <button type="button" >GRAPHIC DESIGN</button>
+            <button type="button" >ILLUSTRATION</button>
+        </div>
+        <div class="nav-button-container">
+            <a href="./two-d.html"><button type="button" >2D Design</button></a>
+            <a href="./logo.html"><button class="active" type="button" >Logo</button></a>
+        </div>
+
+        <div class="content-wrapper" id="top">
+            <div class="illustration-grid">
+                <a href="#"><img onclick="openModal(0)" src="./images/logo_1.png" alt="logo_1"></a>
+                <a href="#"><img onclick="openModal(1)" src="./images/logo_2.png" alt="logo_2"></a>
+                <a href="#"><img onclick="openModal(2)" src="./images/logo_3.png" alt="logo_3"></a>
+                <a href="#"><img onclick="openModal(3)" src="./images/logo_4.png" alt="logo_4"></a>
+        </div>
+        </div>
+        <div style="text-align: center"><a href="#top"></a><button>Back To Top</button></a></div>
+        
+    </div>
+
+    <div class="footer">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="footer-left">
+                    <a href="#" >
+                        <img src="images/nbg_logo.png">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="footer-center">
+                    <div class="middle">
+                        <p class="bold">Commission and Inquiries</p>
+                        <p>sarawhang1992@gmail.Commission</p>
+                        <p>(917)750-9199</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="footer-right">
+                    <a href="https://www.linkedin.com/in/sarah-whang-27472063" class="right">
+                        Let's Connected!
+                        <img src="images/nbg_linkedIn_logo.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" style="">
+            <div style="margin: auto 0; padding: 24px;">
+                <div class="row">
+                    <div class="col-md-6">  
+                        <div style="display: flex; align-items: center; font-size: 24px">
+                            <i id="chev-left" class="fas fa-chevron-left"></i>
+                            <img  style="width: 100%; margin: 0 8px" class="modal-image" src="" alt="">
+                            <i id="chev-right" class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div style="padding: 0 16px">
+                            <h5 class="modal-title"></h5>
+                            <p class="modal-description"></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        let illusArray = [
+        {
+                image: './images/logo_1.png',
+                title: 'Title Goes Here',
+                description: 'Description goes here,'
+            },
+            {
+                image: './images/logo_2.png',
+                title: 'Title Goes Here',
+                description: 'Description goes here,'
+            },
+            {
+                image: './images/logo_3.png',
+                title: 'Title Goes Here',
+                description: 'Description goes here,'
+            },
+            {
+                image: './images/logo_4.png',
+                title: 'Title Goes Here',
+                description: 'Description goes here,'
+            },
+        ]
+        let modal = $('#myModal')
+        function openModal(index) {
+            $('#myModal').modal('show')
+            let $modalImage = $('#myModal').find('.modal-image')
+            let $modalTitle =  $('#myModal').find('.modal-title')
+            let $modalDes =  $('#myModal').find('.modal-description')
+            let $chevleft = $('#myModal').find('#chev-left')
+            let $chevright = $('#myModal').find('#chev-right')
+            console.log($chevleft);
+
+            $modalImage.attr('src' , illusArray[index].image);
+            $modalTitle.text(illusArray[index].title);
+            $modalDes.text(illusArray[index].description);
+            console.log(index)
+            if(index - 1 === -1){
+                $chevleft.hide()
+            }else{
+                $chevleft.show()
+                $chevleft.unbind('click');
+                $chevleft.on("click" , function(){
+                    switchModal(index - 1)
+                })
+            }
+            if(index + 1 > illusArray.length - 1){
+                $chevright.hide()
+            }else{
+                $chevright.show()
+
+                console.log('fired')
+                $chevright.unbind('click');
+
+                $chevright.on("click" , function(){
+                    console.log('fired')
+                    switchModal(index + 1)
+                })
+            }
+        }
+        function switchModal(index){
+            $('#myModal').modal('hide')
+            setTimeout(()=>{openModal(index)} , 500)
+            // openModal(index)
+        }
+    </script>
+</body>
+
+</html>
